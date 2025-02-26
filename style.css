@@ -1,0 +1,46 @@
+/* General Style */
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: #000; /* Solid background or a background-image */
+  color: #fff;
+  padding-top: 100px; /* leave room for navbar */
+  display: flex;
+  align-items: center;
+}
+
+.hero-text .highlight {
+  color: #f9c74f; /* highlight color */
+}
+
+.hero-img {
+  max-width: 300px;
+  border: 5px solid #f9c74f;
+  margin-top: 20px;
+}
+
+/* Project Image Card */
+.project-img {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+
+/* Spacing for sections */
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Navbar Tweaks */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f9c74f;
+}
