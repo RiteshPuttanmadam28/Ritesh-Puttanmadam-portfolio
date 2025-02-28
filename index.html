@@ -116,54 +116,52 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home-section" class="hero">
-      <div class="home-slider owl-carousel">
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/profilepic1.jpg);">
-                <div class="overlay"></div>
-              </div>
-              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                  <span class="subheading">Hello!</span>
-                  <h1 class="mb-4 mt-3">I'm <span>Ritesh Puttanmadam</span></h1>
-                  <!-- Typing Animation -->
-                  <span id="typing-animation"></span>
-                  <script>
-                    const typingAnimationElement = document.getElementById('typing-animation');
-                    const typingTexts = [
-                      'Developer  ',
-                      'Innovator  ',
-                      'Learner  '
-                    ];
-                    function playTypingAnimation(text) {
-                      for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => {
-                          typingAnimationElement.textContent += text[i];
-                        }, i * 200);
-                      }
-                      setTimeout(() => {
-                        typingAnimationElement.textContent = '';
-                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                      }, text.length * 200);
-                    }
-                    playTypingAnimation(typingTexts[0]);
-                  </script>
-                  <br><br>
-                  <h2>Aspiring Software Developer</h2>
-                  <p>
-                    <a href="https://www.linkedin.com/in/ritesh-puttanmadam" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-                    <a href="https://github.com/RiteshPuttanmadam28" class="btn btn-white btn-outline-white py-3 px-4">My Works</a>
-                  </p>
-                </div>
-              </div>
+<section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <div class="text text-center">
+              <span class="subheading">Hello!</span>
+              <h1 class="mb-4 mt-3">I'm <span>Ritesh Puttanmadam</span></h1>
+              <!-- Typing Animation -->
+              <span id="typing-animation"></span>
+              <script>
+                const typingAnimationElement = document.getElementById('typing-animation');
+                const typingTexts = [
+                  'Developer  ',
+                  'Innovator  ',
+                  'Learner  '
+                ];
+                function playTypingAnimation(text) {
+                  for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                      typingAnimationElement.textContent += text[i];
+                    }, i * 200);
+                  }
+                  setTimeout(() => {
+                    typingAnimationElement.textContent = '';
+                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                  }, text.length * 200);
+                }
+                playTypingAnimation(typingTexts[0]);
+              </script>
+              <br><br>
+              <h2>Aspiring Software Developer</h2>
+              <p>
+                <a href="https://www.linkedin.com/in/ritesh-puttanmadam" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+                <a href="https://github.com/RiteshPuttanmadam28" class="btn btn-white btn-outline-white py-3 px-4">My Works</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- About Section -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
@@ -176,7 +174,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="Hi" class="img-fluid rounded b-shadow-a" alt="Profile Image">
+                        <img src="images/profilepic1_edited.JPG" class="img-fluid rounded  b-shadow-a" alt="Profile Image">
                       </div>
                     </div>
                     <!-- Personal Details -->
@@ -401,6 +399,64 @@
   </div>
 </section>
 
+    <!-- Certifications Section -->
+    <section class="ftco-section" id="certification-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <!--  <h1 class="big big-2">CERTIFICATIONS</h1> -->
+            <h2 class="mb-4">CERTIFICATIONS</h2>
+            <p>Some of my professional certifications</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+
+          <!-- Certification 1 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/Tata_virtual_Internship.jpg');">
+              </a>              
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">TATA Data Visualization: Empowering Business with Effective Insights</a></h3>
+                <p> Completed a simulation involving creating data visualizations for Tata Consultancy Services
+                    Prepared questions for a meeting with client senior leadership
+                    Created visuals for data analysis to help executives with effective decision making
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Certification 2 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/coursera_pointer_array.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Coursera - Pointers, Arrays, and Recursion</a></h3>
+                <p>Completed a rigorous C programming course focusing on the fundamentals including control structures, pointers, and memory management.
+                   Built practical projects to understand data structures and algorithm efficiency.
+                   Developed strong debugging and code optimization skills while solving real-world programming challenges.
+                </p> 
+              </div>
+            </div>
+          </div>
+          <!-- Certification 3 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/html_css_js_coursera.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Coursera - Programming Foundations with JavaScript, HTML and CSS</a></h3>
+                <p>Earned a certification in HTML, CSS, and JavaScript, where I learned responsive design principles and front-end development best practices.
+                   Developed interactive and dynamic web pages using modern web standards.
+                   Gained hands-on experience with building user-friendly interfaces and optimizing web performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -446,9 +502,10 @@
                 <span class="icon-globe"></span>
               </div>
               <h3 class="mb-4">Download Resume</h3>
-              <p><a href="#">resumelink</a></p>
+              <p><a href="RiteshPuttanmadam_CS_Resume.pdf" download="RiteshPuttanmadam_CS_Resume.pdf">Download Resume</a></p>
             </div>
           </div>
+          
 
           <div class="container">
             <br>
