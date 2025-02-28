@@ -1,289 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ritesh Puttanmadam</title>
-  <!-- Bootstrap CSS -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Google Font -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
-    rel="stylesheet"
-  />
-</head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
-  
-  <!-- NAVBAR -->
-  <nav 
-    id="navbar" 
-    class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
-  >
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">Ritesh</a>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navmenu" 
-        aria-controls="navmenu" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <head>
+    <title>Ritesh Puttanmadam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#resume" class="nav-link">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <!-- Left Text -->
-        <div class="col-lg-6 hero-text">
-          <h1 class="display-4 fw-bold">
-            Hello! <br />
-            I'm <span class="highlight">Ritesh Puttanmadam</span>
-          </h1>
-          <p class="lead">Aspiring Software Developer</p>
-          <div class="mt-4">
-            <a 
-              href="https://www.linkedin.com/in/ritesh-puttanmadam" 
-              class="btn btn-warning me-2"
-              target="_blank"
-              >LinkedIn</a>
-            <a 
-              href="https://github.com/riteshputtanmadam" 
-              class="btn btn-outline-light"
-              target="_blank"
-              >My Works</a>
-          </div>
-        </div>
-        <!-- Right Image -->
-        <div class="col-lg-6 text-center">
-          <!-- Replace 'profile.png' with your actual image -->
-          <img 
-            src="images/profile.png" 
-            alt="Ritesh Profile" 
-            class="img-fluid rounded-circle hero-img"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+    <link rel="stylesheet" href="css/aos.css">
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 fw-bold text-center">About Me</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <p>
-            I'm a Computer Science senior with hands-on experience in front-end 
-            and back-end development, AI, and machine learning. Proficient in building 
-            scalable applications, optimizing system performance, and developing 
-            intelligent solutions using Java, Python, and modern frameworks.
-          </p>
-          <p>
-            Seeking a software development role to contribute technical expertise in 
-            creating innovative, high-impact solutions.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li><strong>Address:</strong> Chandler, Arizona, USA</li>
-            <li><strong>Email:</strong> <a href="mailto:riteshiyer02@gmail.com">riteshiyer02@gmail.com</a></li>
-            <li><strong>Phone:</strong> +1-952-228-1021</li>
-            <li><strong>Education:</strong> B.S. in Computer Science, Arizona State University</li>
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /*======================================
+      //-- ABOUT Section
+      ======================================*/
+
+      .about-mf .box-shadow-full {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      .about-mf .about-img {
+        margin-bottom: 2rem;
+      }
+
+      .about-mf .about-img img {
+        margin-left: 10px;
+      }
+
+      .skill-mf .progress {
+        margin: .5rem 0 1.2rem 0;
+        border-radius: 0;
+        height: .7rem;
+      }
+
+      .skill-mf .progress .progress-bar {
+        height: .7rem;
+        background-color: #ffbd39;
+      }
+
+      /* Animation styles for typing effect */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
+
+      #typing-animation:before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ccc;
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
+
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+
+      @keyframes typing-cursor {
+        from { width: 5px; }
+        to { width: 0; }
+      }
+
+      /* Project image zoom effect */
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
+
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+    </style>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ritesh Puttanmadam</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- RESUME SECTION -->
-  <section id="resume" class="py-5">
-    <div class="container">
-      <h2 class="mb-4 fw-bold text-center">Resume</h2>
-
-      <!-- Experience -->
-      <h4 class="mt-5 fw-bold">Experience</h4>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Tech Associate | Specialty Sales</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Nov 2024 - Present</h6>
-          <ul>
-            <li>Delivered personalized customer experiences by recommending technology products aligned with client needs.</li>
-            <li>Improved inventory management processes, reducing stockouts.</li>
-            <li>Enhanced team operations by optimizing sales floor organization and product knowledge.</li>
-            <li>Consistently surpassed daily sales targets by 15% and achieved a 95% customer satisfaction rating.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <h4 class="mt-5 fw-bold">Education</h4>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">B.S. Computer Science</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Arizona State University | Aug 2021 - May 2025</h6>
-          <p>GPA: 3.64. Dean's List Award for Academic Excellence.</p>
-          <p>Relevant Coursework: Data Structures & Algorithms, Software Engineering, Operating Systems, OOP, Cybersecurity, Database Management.</p>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">M.S. Computer Science</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Arizona State University | Aug 2025 - May 2026</h6>
-          <p>Pursuing Master's degree.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 fw-bold text-center">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div 
-              class="card-img-top project-img" 
-              style="background-image: url('images/proj_1.jpg');"
-            >
+    <!-- Home Section -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/profilepic1.jpg);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Ritesh Puttanmadam</span></h1>
+                  <!-- Typing Animation -->
+                  <span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = [
+                      'Developer  ',
+                      'Innovator  ',
+                      'Learner  '
+                    ];
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 200);
+                      }
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 200);
+                    }
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
+                  <br><br>
+                  <h2>Aspiring Software Developer</h2>
+                  <p>
+                    <a href="https://www.linkedin.com/in/ritesh-puttanmadam" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+                    <a href="https://github.com/RiteshPuttanmadam28" class="btn btn-white btn-outline-white py-3 px-4">My Works</a>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Effortlogger Tool</h5>
-              <p class="card-text">
-                Developed using JavaFX and MySQL. Achieved project milestones ahead of schedule and improved resource allocation efficiency by 20%.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="Hi" class="img-fluid rounded b-shadow-a" alt="Profile Image">
+                      </div>
+                    </div>
+                    <!-- Personal Details -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Ritesh Puttanmadam</span></p>
+                        <p><span class="title-s">Role: </span> <span>Tech Associate / Aspiring Software Developer</span></p>
+                        <p><span class="title-s">Education: </span> <span>B.S. Computer Science, ASU</span></p>
+                        <p><span class="title-s">Address: </span> <span>Chandler, Arizona, USA</span></p>
+                        <p><span class="title-s">Email: </span> <span>riteshiyer02@gmail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>+1-952-228-1021</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Skills -->
+                  <div class="skill-mf">
+                    <p class="title-s">Skills</p>
+                    <span>Java</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <span>Python</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <span>JavaScript</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <span>HTML & CSS</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <span>AWS & MySQL</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+                  <p>
+                    Computer Science senior with hands-on experience in front-end and back-end development, AI, and machine learning. Proficient in building scalable applications, optimizing system performance, and developing intelligent solutions using Java, Python, and modern frameworks. Seeking a software development role to contribute technical expertise in creating innovative, high-impact solutions.
+                  </p>
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex"><span>Profile:</span> <span>Tech Associate / Aspiring Software Developer</span></li>
+                    <li class="d-flex"><span>Education:</span> <span>B.S. Computer Science, Arizona State University</span></li>
+                    <li class="d-flex"><span>Address:</span> <span>Chandler, Arizona, USA</span></li>
+                    <li class="d-flex"><span>Email:</span> <span>riteshiyer02@gmail.com</span></li>
+                    <li class="d-flex"><span>Phone:</span> <span>+1-952-228-1021</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-4">
+                    <span class="number" data-number="1">0</span> <span>Award</span>
+                  </p>
+                  <p class="mb-4">
+                    <span class="number" data-number="3">0</span> <span>Projects</span>
+                  </p>
+                  <p class="mb-4">
+                    <span class="number" data-number="3">0</span> <span>Certifications</span>
+                  </p>
+                  <p class="mb-4">
+                    <span class="number" data-number="6">0</span> <span>Courses</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <!-- <h1 class="big big-2">Resume</h1> -->
+            <h2 class="mb-4">Resume</h2>
+            <p>Computer Science student with hands-on development experience and a strong foundation in modern programming techniques.</p>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="row">
+          <h1 class="big-4">WORK EXPERIENCE</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Nov 2024 - Present</span>
+              <h2>Tech Associate</h2>
+              <span class="position">Specialty Sales</span>
+              <p class="mt-4">
+                <ul>
+                  <li>Delivered personalized customer experiences by recommending technology products aligned with client needs, increasing satisfaction and repeat business.</li>
+                  <li>Improved inventory management to ensure well-stocked, visually appealing shelves and reduce stockouts.</li>
+                  <li>Enhanced team operations by optimizing sales floor organization and product knowledge.</li>
+                  <li>Consistently surpassed daily sales targets by 15% and achieved a 95% customer satisfaction rating, contributing to a 10% overall performance increase.</li>
+                </ul>
               </p>
-              <a 
-                href="https://github.com/riteshputtanmadam/effortlogger-tool" 
-                class="btn btn-dark" 
-                target="_blank"
-              >View on GitHub</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div 
-              class="card-img-top project-img" 
-              style="background-image: url('images/proj_2.jpg');"
-            >
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Synchronous Sequence Machine</h5>
-              <p class="card-text">
-                Built two synchronous sequence machines using Icarus Verilog, reducing resource utilization by 25% while meeting all functional requirements.
+        <br><br>
+
+        <!-- Education -->
+        <div class="row">
+          <h1 class="big-4">EDUCATION</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2021 - May 2025</span>
+              <h2>B.S. Computer Science</h2>
+              <span class="position">Arizona State University</span>
+              <p class="mt-4">
+                GPA: 3.64. Awarded the Dean's List Award for Academic Excellence.
+                <br>
+                Coursework: Data Structures &amp; Algorithms, Software Engineering, Operating Systems, OOP, Cybersecurity, Database Management.
               </p>
-              <a 
-                href="https://github.com/riteshputtanmadam/capstone-sequence-machine" 
-                class="btn btn-dark" 
-                target="_blank"
-              >View on GitHub</a>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div 
-              class="card-img-top project-img" 
-              style="background-image: url('images/proj_3.jpg');"
-            >
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Assembly Line Project Design</h5>
-              <p class="card-text">
-                Designed an optimized LEGO car assembly line achieving 81.25% production efficiency and significantly reducing cycle time.
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2025 - May 2026</span>
+              <h2>M.S. Computer Science</h2>
+              <span class="position">Arizona State University</span>
+              <p class="mt-4">
+                Pursuing Master's degree.
               </p>
-              <a 
-                href="https://github.com/riteshputtanmadam/assembly-line-project" 
-                class="btn btn-dark"
-                target="_blank"
-              >View on GitHub</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="mb-4 fw-bold text-center">Contact Me</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center">
-          <p><strong>Address:</strong> Chandler, Arizona, United States</p>
-          <p><strong>Phone:</strong> <a href="tel:+19522281021">+1-952-228-1021</a></p>
-          <p><strong>Email:</strong> <a href="mailto:riteshiyer02@gmail.com">riteshiyer02@gmail.com</a></p>
-          <p>
-            <strong>Resume:</strong> 
-            <a 
-              href="files/RiteshPuttanmadam_Resume_Internship.pdf" 
-              target="_blank"
-            >Download PDF</a>
-          </p>
-          <p>
-            <a 
-              href="https://forms.gle/uLaTShUKXraAvHJ77" 
-              class="btn btn-warning" 
-              target="_blank"
-            >Have a Question?</a>
-          </p>
-          <div class="mt-3">
-            <a 
-              href="https://www.linkedin.com/in/ritesh-puttanmadam" 
-              target="_blank"
-              class="text-decoration-none me-3"
-            >
-              <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
-            </a>
-            <!-- Add more social icons if you like -->
+    <!-- Projects Section -->
+<section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">PROJECTS</h1>
+        <h2 class="mb-4">PROJECTS</h2>
+        <p>Highlighted projects from my academic and personal endeavors.</p>
+      </div>
+    </div>
+    <!-- Single row with three columns -->
+    <div class="row d-flex">
+      <!-- Project 1: Website Fuel AI Website and Campaign Builder -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="https://github.com/riteshputtanmadam/assembly-line-project" class="block-20 zoom-effect" style="background-image: url('images/C50692E4.webp');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/riteshputtanmadam/assembly-line-project">
+                Website Fuel AI Website and Campaign Builder
+              </a>
+            </h3>
+            <p>
+              Configured interactive bubble charts to deliver visual insights for rapid data interpretation.
+              Implemented tag-based querying for base rows, streamlining data analysis and retrieval.
+              Enabled prompt-based customization for text and background colors to personalize the interface.
+              Introduced prompt-driven spacing controls via padding and margin adjustments for a responsive layout.
+              Collaborated with stakeholders and led a team of engineers in iterative development and continuous enhancement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2: Effortlogger Tool -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/riteshputtanmadam/effortlogger-tool" class="block-20 zoom-effect" style="background-image: url('images/JavaFXIsland600x300.webp');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/riteshputtanmadam/effortlogger-tool">Effortlogger Tool</a>
+            </h3>
+            <p>
+              Developed using JavaFX and MySQL. Achieved project milestones ahead of schedule and improved resource allocation efficiency by 20%.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3: Synchronous Sequence Machine -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/riteshputtanmadam/capstone-sequence-machine" class="block-20 zoom-effect" style="background-image: url('images/GTKWave_simple_verilog_example.png');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/riteshputtanmadam/capstone-sequence-machine">Synchronous Sequence Machine</a>
+            </h3>
+            <p>
+              Built two synchronous sequence machines using Icarus Verilog, reducing resource utilization by 25% while meeting all functional requirements.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">
-      &copy; <script>document.write(new Date().getFullYear());</script> 
-      Ritesh Puttanmadam. All Rights Reserved.
-    </p>
-  </footer>
+    <!-- Contact Section -->
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <!-- <h1 class="big big-2">Contact</h1> -->
+            <h2 class="mb-4">CONTACT ME</h2>
+            <p>Get in touch using the details below!</p>
+          </div>
+        </div>
 
-  <!-- Bootstrap JS + Popper.js -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-</body>
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>Chandler, Arizona, United States</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Phone</h3>
+              <p><a href="tel:+19522281021">+1-952-228-1021</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email</h3>
+              <p><a href="mailto:riteshiyer02@gmail.com">riteshiyer02@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="#">resumelink</a></p>
+            </div>
+          </div>
+
+          <div class="container">
+            <br>
+            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate normal-txt">Find me on </li>
+              <li class="ftco-animate"><a href="https://www.linkedin.com/in/ritesh-puttanmadam"><span class="icon-linkedin"></span></a></li>
+            </ul>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
